@@ -4,9 +4,11 @@ export const Contact = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState('');
 
   const handleSubmit = () => {
-    if (!email || !name || !message) {
+    if (!email || !name || !message || !phone || !subject) {
       alert('Por favor, preencha todos os campos.');
       return;
     }
@@ -15,51 +17,89 @@ export const Contact = () => {
     setEmail('');
     setName('');
     setMessage('');
+    setPhone('');
+    setSubject('');
   };
 
   return (
-    <section id="contact">
-      <div>
-        <div className="bg-[#CC7FD3] font-poppins flex flex-col justify-center text-center items-center p-6 mt-8 md:mt-0 space-y-6 relative">
-          <div>
-            <h1 className="text-black text-[20px] md:text-[30px] font-semibold">
-              Fale Conosco
-            </h1>
-            <p className="text-white text-lg md:text-xl">
-              Preencha os campos abaixo para entrar em contato conosco
-            </p>
+    <section id="contact" className="py-12 bg-gradient-to-r from-[#D17AD7] to-[#B02085]">
+      <div className="container mx-auto px-4">
+        <div className="bg-white text-center p-8 rounded-xl shadow-lg">
+          <h1 className="text-[#2E2E2E] text-3xl md:text-4xl font-semibold mb-4">
+            Fale Conosco
+          </h1>
+          <p className="text-[#555] text-lg md:text-xl mb-8">
+            Preencha os campos abaixo para entrar em contato conosco. Responderemos o mais rápido possível!
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="Digite seu nome"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="bg-[#F4F4F4] rounded-2xl p-4 w-full h-[50px] text-black shadow-lg focus:outline-none focus:ring-2 focus:ring-[#B02085] transition-all"
+              />
+            </div>
+
+            <div className="w-full">
+              <input
+                type="email"
+                placeholder="Digite seu email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-[#F4F4F4] rounded-2xl p-4 w-full h-[50px] text-black shadow-lg focus:outline-none focus:ring-2 focus:ring-[#B02085] transition-all"
+              />
+            </div>
+
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="Digite seu telefone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="bg-[#F4F4F4] rounded-2xl p-4 w-full h-[50px] text-black shadow-lg focus:outline-none focus:ring-2 focus:ring-[#B02085] transition-all"
+              />
+            </div>
+
+            <div className="w-full">
+              <select
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                className="bg-[#F4F4F4] rounded-2xl p-4 w-full h-[50px] text-black shadow-lg focus:outline-none focus:ring-2 focus:ring-[#B02085] transition-all"
+              >
+                <option value="" disabled>Selecione o assunto</option>
+                <option value="Suporte">Suporte</option>
+                <option value="Vendas">Vendas</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-[700px]">
-            <input
-              type="text"
-              placeholder="Digite seu nome"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="bg-[#D9D9D9] rounded-2xl p-4 w-full max-w-[500px] h-[45px] text-black shadow-md focus:outline-none focus:ring-2 focus:ring-[#B02085]"
-            />
-            <input
-              type="email"
-              placeholder="Digite seu email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-[#D9D9D9] rounded-2xl p-4 w-full max-w-[500px] h-[45px] text-black shadow-md focus:outline-none focus:ring-2 focus:ring-[#B02085]"
-            />
-            </div>
-            <div className='flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-[700px] '>
+          <div className="w-full mt-6">
             <textarea
               placeholder="Sua mensagem"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="bg-[#D9D9D9] rounded-2xl p-4 w-full max-w-[600px] h-[100px] text-black shadow-md focus:outline-none focus:ring-2 focus:ring-[#B02085]"
+              className="bg-[#F4F4F4] rounded-2xl p-4 w-full h-[120px] text-black shadow-lg focus:outline-none focus:ring-2 focus:ring-[#B02085] transition-all"
             />
+          </div>
+
+          <div className="mt-6 flex justify-center">
             <button
               onClick={handleSubmit}
-              className="bg-[#B02085] text-white rounded-2xl ml-6 px-6 py-2 h-[45px] shadow-md transition-transform transform hover:scale-110"
+              className="bg-[#B02085] text-white rounded-2xl px-8 py-3 h-[50px] shadow-lg transition-transform transform hover:scale-110 hover:bg-[#9A0D6C]"
             >
               Enviar
             </button>
-            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-[#555] text-sm">
+              Ao clicar em "Enviar", você concorda com nossa <a href="#" className="text-[#B02085]">Política de Privacidade</a>.
+            </p>
+          </div>
         </div>
       </div>
     </section>
