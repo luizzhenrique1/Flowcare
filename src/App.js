@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
 
+
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
       <Products/>
       <Contact/>
       <Footer/>
+      
 
     </div>
   );

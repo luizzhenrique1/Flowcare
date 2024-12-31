@@ -31,7 +31,7 @@ export const Articles = () => {
           <div className='max-w-none w-64 h-64 rounded-full overflow-hidden mb-4 transition-transform transform hover:scale-110'>
             <img
               src={HigienePessoal}
-              className="shadow-lg w-full h-full object-cover"
+              className="shadow-lg w-full h-full object-cover cursor-pointer"
               alt="Imagem de Higiene Pessoal"
             />
           </div>
@@ -43,7 +43,7 @@ export const Articles = () => {
           <div className='max-w-none w-64 h-64 rounded-full overflow-hidden mb-4 transition-transform transform hover:scale-110'>
             <img
               src={CuidadoDiario}
-              className="shadow-lg w-full h-full object-cover"
+              className="shadow-lg w-full h-full object-cover cursor-pointer"
               alt="Imagem de Cuidado Diário"
             />
           </div>
@@ -55,7 +55,7 @@ export const Articles = () => {
           <div className='max-w-none w-64 h-64 rounded-full overflow-hidden mb-4 transition-transform transform hover:scale-110'>
             <img
               src={Ciclo}
-              className="shadow-lg w-full h-full object-cover"
+              className="shadow-lg w-full h-full object-cover cursor-pointer"
               alt="Imagem do Ciclo Menstrual"
             />
           </div>
@@ -67,7 +67,7 @@ export const Articles = () => {
           <div className='max-w-none w-64 h-64 rounded-full overflow-hidden mb-4 transition-transform transform hover:scale-110'>
             <img
               src={FilhaMae}
-              className="shadow-lg w-full h-full object-cover"
+              className="shadow-lg w-full h-full object-cover cursor-pointer"
               alt="Imagem da Mãe e Filha"
             />
           </div>
