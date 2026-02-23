@@ -66,9 +66,3 @@ Feito com ❤️ pensando em cuidado, discrição e bem-estar feminino
 
 Dúvidas ou sugestões? Abra uma **issue**!
 ```
-
-Substitua `SEU_USUARIO` pelo seu nome de usuário real do GitHub.
-
-Essa versão mantém o tom discreto, acolhedor e profissional, sem entrar em detalhes explícitos demais no título ou na descrição inicial, mas deixando claro o propósito do projeto.
-
-Se quiser ajustar alguma frase, remover a demo ou mudar o emoji, é só editar. Boa sorte com o FlowCare! 🌸
