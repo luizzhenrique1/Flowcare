@@ -65,4 +65,3 @@ MIT © [Luiz Henrique]
 Feito com ❤️ pensando em cuidado, discrição e bem-estar feminino
 
 Dúvidas ou sugestões? Abra uma **issue**!
-```
